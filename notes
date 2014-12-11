@@ -1,0 +1,19 @@
+this site does time estimation
+
+http://www.cotrip.org/speed.htm
+
+
+There doesn't seem to be a historical set of travel times readily available.... so probably have to scrape it.
+
+The following are data links which build the cotrip.org interface:
+
+var ROUTES_URL = "/speed/getRoutes.do";
+var SLOWDOWNS_URL = "/speed/getSlowDowns.do";
+var SEGMENTS_URL = "/speed/getSegments.do";
+var GET_SEGMENT_POLYLINE_URL = "/speed/getSegmentPolyline.do";
+var GET_ROUTE_POLYLINE_URL = "/speed/getRoutePolyline.do";
+
+#the website polls every 2 minutes... probably only need 5 minute increments.
+
+If it polls every 2 minutes, it means they don't really ahve a rate limit...should be able to scrape continuously forever.
+
